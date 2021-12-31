@@ -1,21 +1,15 @@
-var arr = [4,5,734,43,45,62,38];
+var arr = [4,5,734,43,45];
 
 // Your code here, use the push function and the random function.
-function arrRandom()
-
-{
-    
-	var randomNumber = (Math.floor(Math.random()));
-	return randomNumber;
+const randomNumberGenerator = () => {
+	let randomNumbers = Math.floor(Math.random() * 69);
+	return randomNumbers;
 }
 
 
-console.log(arrRandom());
+arr.push(randomNumberGenerator());
+arr.push(randomNumberGenerator());
 
-function push {
-    var arrRandom.push(item[62,38]);
-}
 
-console.log(push);
 
 console.log(arr);

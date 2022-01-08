@@ -1,12 +1,6 @@
-function countingNumbers()
-{
-	
-	for(var loopHole = 7; loopHole < 13; loopHole++)
-	{
-		console.log(loopHole);
+function applePie(){
+	for(var raccoon = 7; raccoon <13; raccoon++){
+		console.log(raccoon)
+		}
 	}
-	
-	return loopHole;
-}
-
-countingNumbers();
+applePie();

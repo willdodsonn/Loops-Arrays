@@ -3,18 +3,18 @@ let counts = {};
 
 // your code here
 for(let i in par){
-    const letter = par[i].toLowerCase();
-    console.log(letter);
-    if(letter == " ") continue;
-    else if (counts[letter] == undefined) {
-        console.log("found" + letter + " for the first time")
-        counts[letter] = 1;
+    const count = par[i].toLowerCase();
+    
+    if(count == " ") continue;
+    else if(counts[count] == undefined){
+        console.log("found "+ count + " for the first time");
+        counts[count]=1;
     }
     else{
-        console.log("found"+letter+"more than once")
-        counts[letter] =counts[letter] +1;
+        console.log("found "+ count + " more than once");
+        counts[count]=counts[count]+1
     }
+
+    
 }
-
-
 console.log(counts);

@@ -1,9 +1,10 @@
 let contact = {
-    fullname: "John Doe",
-    phone: "123-123-2134",
-    email: "test@nowhere.com"
+    fullname: "Jane Doe",
+    phone: "321-321-4321",
+    email: "test@test.com"
 }
 for(let key in contact){
-    console.log(contact)
-;}
+    // Code goes here
+    console.log(contact[key])
+}
 

@@ -5,18 +5,15 @@ let people = [
 	{ name: 'Dylan', birthDate: new Date(1999,12,14) },
 	{ name: 'Steve', birthDate: new Date(2003,4,24) }
 ];
-for(let i = 0; i < people.length; i++){
-	let birthday = people[i];
-	console.log(birthday);
-}
+
 
 let myName = "Hello my name is ";
 let andIn = " and I am ";
 let yearsOld = " years old.";
 
-const getAge = (birthDateString) => {
+const getAge = (birthDateObject) => {
 	const today = new Date();
-	const dob = new Date(birthDateString);
+	const dob = new Date(birthDateObject);
   
 	const yearsDifference = today.getFullYear() - dob.getFullYear();
   
@@ -30,10 +27,14 @@ const getAge = (birthDateString) => {
 	return yearsDifference;
   };
   
-  console.log(getAge(1986,10,24));
+ 
 
 let simplifier = function(person){
-	return myName + person.name + andIn +  people + yearsOld;
+	return myName + person.name + andIn +  person.Date + yearsOld;
 };
+
+people.forEach((person) =>{
+	return getAge(person)
+})
 
 console.log(people.map(simplifier));

@@ -10,3 +10,5 @@ let tasks = [
 ];
 
 //your code here
+const completedTasks = tasks.filter((task)=> task.done===true);
+console.log(completedTasks);

@@ -1,10 +1,16 @@
 // Code goes here
-function matrixBuilder(numOfRowsAndColumns){
-   for(let i = 0;  i < numOfRowsAndColumns.length; i++){
-       for(let j = 0; j < numOfRowsAndColumns[i].length; j++){
-        return(i, j);
-       }
-   }
+function matrixBuilder(numOfRowsAndColumns) {
+    let newArray = [];
+    // newArray.push(random);
+    for (let j = 0; j < numOfRowsAndColumns[i]; j++) {   
+        for (let i = 0; i < numOfRowsAndColumns; i++) {
+            let random = Math.round(Math.random());
+            newArray.push(random);
+           
+
+        }
+    }
+    return newArray;
 }
 
 // do not change anything from this line down

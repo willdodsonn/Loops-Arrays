@@ -1,5 +1,3 @@
-const { listenerCount } = require("process");
-
 let allColors = [
 	{label: 'Red', sexy: true},
 	{label: 'Pink', sexy: false},
@@ -12,20 +10,13 @@ let allColors = [
 
 function generateLI(color){
 	// your code here
-	ul = document.createElement('ul');
-
-	return ul;
 	
+	return "<li>"+ color.label +"</li>";
 }
 
-
 function filterColors(color){
-	allColors.forEach(function (string) {
-		var li = document.createElement('li');
-		li.textContent = allColors.label;
-		list.appendChild(li);
-	});
-	
+	// your code here
+	return color.sexy === true;
 }
 
 function generateHTMLFromArray(array){

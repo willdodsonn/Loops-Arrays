@@ -1,3 +1,5 @@
+const { listenerCount } = require("process");
+
 let allColors = [
 	{label: 'Red', sexy: true},
 	{label: 'Pink', sexy: false},
@@ -10,6 +12,13 @@ let allColors = [
 
 function generateLI(color){
 	// your code here
+	ul = document.createElement('ul');
+	for(let i = 0; i < allColors.length; i++){
+		let item = document.createElement('li');
+		item.appendChild(document.createTextNode(allColors[i]));
+		list.appendChild(item)
+	}
+	return list;
 }
 
 function filterColors(color){

@@ -3,24 +3,23 @@ let parking_state = [
   [0,0,0],
   [1,1,2]
 ]
-let state = {occupiedSlots: 0, availableSlots: 0, totalSlots: 0};
-function getParkingLotState() {
-  for (item of parking_state) {
-    for (parkspace of item) {
-      if (parkspace === 1) {
-        state.occupiedSlots++;
+const getParkingLotState = (total,available,occupied) => {
+    let parkSum = function (){
+      let numberPark = 0;
+      for(let i = 0; i < parking_state.length; i++){
+        numberPark += parking_state[i][2];
       }
-      else if (parkingSpace === 2) {
-        state.availableSlots++;
-      }
-      if (!parkspace) {
-        state.totalSlots++;
-      }
+      return numberPark;
+      
     }
-  }
-}
-console.log(getParkingLotState(parking_state))
 
-occupiedSlots (1) = 5;
-availableSlots (2) = 1;
-totalSlots () = 6;
+    let result = {
+      totalSlots : parkSum(total),
+      availableSlots: parkSum(available),
+      occupiedSlots : parkSum(occupied)
+    };
+    return result;
+}
+
+
+console.log(getParkingLotState(parking_state));

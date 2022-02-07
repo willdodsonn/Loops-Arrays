@@ -13,16 +13,19 @@ let allColors = [
 function generateLI(color){
 	// your code here
 	ul = document.createElement('ul');
-	for(let i = 0; i < allColors.length; i++){
-		let item = document.createElement('li');
-		item.appendChild(document.createTextNode(allColors[i]));
-		list.appendChild(item)
-	}
-	return list;
+
+	return ul;
+	
 }
 
+
 function filterColors(color){
-	// your code here
+	allColors.forEach(function (string) {
+		var li = document.createElement('li');
+		li.textContent = allColors.label;
+		list.appendChild(li);
+	});
+	
 }
 
 function generateHTMLFromArray(array){

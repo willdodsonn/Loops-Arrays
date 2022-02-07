@@ -3,7 +3,7 @@ let parking_state = [
   [0,0,0],
   [1,1,2]
 ]
-const getParkingLotState = (total,available,occupied) => {
+const getParkingLotState = () => {
     let parkSum = function (){
       let numberPark = 0;
       for(let i = 0; i < parking_state.length; i++){
@@ -14,7 +14,7 @@ const getParkingLotState = (total,available,occupied) => {
     }
 
     let result = {
-      totalSlots : parkSum(total),
+      totalSlots : parking_state.length,
       availableSlots: parkSum(available),
       occupiedSlots : parkSum(occupied)
     };
@@ -22,4 +22,4 @@ const getParkingLotState = (total,available,occupied) => {
 }
 
 
-console.log(getParkingLotState(parking_state));
+console.log(getParkingLotState(parking_state.length, parking_state));
